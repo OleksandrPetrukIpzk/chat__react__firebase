@@ -1,0 +1,129 @@
+.message {
+  width: 100%;
+  height: 100%;
+}
+.message__from {
+  background: #001835;
+  border-radius: 20px;
+  display: flex;
+  color: white;
+}
+.message__to {
+  background: #0F82FF;
+  border-radius: 20px;
+  display: flex;
+  color: white;
+}
+@media screen and (min-width: 1300px) {
+  .message__from {
+    font-size: 25px;
+    padding: 12px 26px;
+    max-width: 600px;
+  }
+  .message__to {
+    font-size: 25px;
+    padding: 12px 26px;
+    max-width: 600px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .message__from {
+    font-size: 20px;
+    padding: 12px 20px;
+    max-width: 260px;
+  }
+  .message__to {
+    font-size: 20px;
+    padding: 12px 20px;
+    max-width: 260px;
+  }
+}
+.message__user {
+  display: flex;
+  background: #001835;
+}
+@media screen and (min-width: 1300px) {
+  .message__img {
+    border-radius: 50px;
+    width: 80px;
+    margin-right: 20px;
+  }
+  .message__user {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .message__user {
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .message__img {
+    border-radius: 50px;
+    width: 80px;
+    margin-right: 10px;
+  }
+}
+.message__name {
+  font-size: 20px;
+  color: white;
+}
+@media screen and (min-width: 1300px) {
+  .message__photo {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .message__photo {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+.message__time {
+  font-size: 12px;
+  text-align: right;
+  margin: 0;
+  align-self: center;
+  padding-left: 5px;
+  color: grey;
+}
+.message__phone {
+  width: 100%;
+}
+.message__none {
+  display: none;
+}
+
+.messages__from {
+  display: flex;
+  justify-content: right;
+  margin-right: 10px;
+}
+
+.messages__to {
+  display: flex;
+  justify-content: left;
+  margin-left: 10px;
+}
+
+#file-upload {
+  display: none;
+}
+
+@media screen and (min-width: 1300px) {
+  label {
+    background: none;
+    border: none;
+  }
+}
+@media screen and (max-width: 1300px) {
+  label {
+    background: none;
+    border: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

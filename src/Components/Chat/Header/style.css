@@ -1,0 +1,142 @@
+@media screen and (max-width: 1300px) {
+  .chat__header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .chat__header__sign {
+    background: #0F82FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+}
+.chat__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #001835;
+}
+.chat__header__sign:hover {
+  background: white;
+  color: #0F82FF;
+}
+.chat__header__info {
+  display: flex;
+  align-items: center;
+}
+.chat__header__info__photo {
+  border-radius: 50px;
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+.chat__header__info__name {
+  color: white;
+  font-size: 19px;
+}
+@media screen and (min-width: 1300px) {
+  .chat__header__sign {
+    background: #0F82FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .chat__header__popup__block {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .chat__header__popup__block {
+    display: flex;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .chat__header__popup__input {
+    margin-right: 0;
+    padding: 10px;
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .chat__header__popup__input {
+    padding: 10px;
+    margin-right: 20px;
+    outline: none;
+    border-radius: 12px;
+    border: 1px solid black;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .chat__header__popup__button {
+    padding: 10px;
+    background: #0F82FF;
+    border-radius: 12px;
+    border: 1px solid #262626;
+    cursor: pointer;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .chat__header__popup__button {
+    padding: 10px;
+    background: #0F82FF;
+    border-radius: 12px;
+    border: 1px solid #262626;
+    cursor: pointer;
+  }
+}
+.chat__header__popup__button:hover {
+  background: #D9D9D9;
+}
+@media screen and (max-width: 1300px) {
+  .chat__header__popup__target {
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 12px;
+    border: none;
+    background: #0F82FF;
+    cursor: pointer;
+    font-size: 12px;
+    color: white;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .chat__header__popup__target {
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    background: #0F82FF;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+  }
+}
+.chat__header__popup__target:hover {
+  background: #20325C;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

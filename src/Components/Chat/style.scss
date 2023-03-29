@@ -1,0 +1,32 @@
+html, body{
+  height: 100%;
+}
+ @media screen and (min-width: 1300px){
+   .chat{
+     &__main{
+       display: flex;
+       min-height: 82vh;
+       flex-direction: row;
+     }
+     &__alert{
+       display: flex;
+       align-items: center;
+       width: 100%;
+       background:  #20325C;;
+       h2{
+         color: white;
+         margin: 0 auto;
+         font-size: 40px;
+       }
+     }
+   }
+ }
+.back{
+  width: 90%;
+  padding: 10px;
+  border-radius: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 0;
+  margin-left: 5%;
+}

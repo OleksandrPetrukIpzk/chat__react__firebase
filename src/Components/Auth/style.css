@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Livvic:wght@100&family=Montserrat:wght@100;400;900&display=swap");
+body {
+  background: #002046;
+  margin: 0;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+.login h2 {
+  color: white;
+  font-family: "Livvic", sans-serif;
+  font-style: normal;
+  font-weight: 250;
+  line-height: 120px;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 1300px) {
+  .login {
+    font-size: 40px;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .login {
+    font-size: 95px;
+  }
+}
+.login__input {
+  background: none;
+  border: 1px solid #B9B9B9;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #808080;
+  padding: 18px 20px;
+  outline: none;
+  margin-bottom: 32px;
+  width: 50%;
+  outline: none;
+}
+.login__button {
+  margin-top: 50px;
+  color: #252525;
+  background: #0F82FF;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 35px;
+  width: 53%;
+  border: 1px solid #0F82FF;
+  padding: 6px;
+  cursor: pointer;
+}
+.login__button:hover {
+  background: white;
+  color: #0F82FF;
+}
+.login__link {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.login__link:hover {
+  color: #0F82FF;
+}
+
+/*# sourceMappingURL=style.css.map */

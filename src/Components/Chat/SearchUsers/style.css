@@ -1,0 +1,101 @@
+@media screen and (max-width: 1300px) {
+  .chat__search__input {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 80%;
+    padding: 10px;
+    background: #002046;
+    font-size: 14px;
+    color: white;
+    outline: none;
+    border: 1px solid #20325C;
+    border-radius: 6px;
+  }
+  .chat__search__user {
+    padding: 10px;
+  }
+  .chat__search__user__name {
+    font-size: 19px;
+    color: #C9C9C9;
+  }
+  .chat__search__user__message {
+    color: white;
+  }
+}
+.chat__search__user__message {
+  overflow: hidden;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chat__search {
+  background: #011C3E;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+@media screen and (min-width: 1300px) {
+  .chat__search__input {
+    width: 400px;
+    height: 30px;
+    padding: 5px;
+    background: #002046;
+    font-size: 14px;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+  }
+}
+.chat__search__user {
+  display: flex;
+  align-items: center;
+  background: #002046;
+  color: white;
+}
+.chat__search__user__photo {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  margin-right: 10px;
+  border-radius: 50px;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 1300px) {
+  .chat__search__user__name {
+    font-size: 19px;
+    color: #C9C9C9;
+  }
+}
+.chat__search__user:hover {
+  background: black;
+  cursor: pointer;
+}
+.chat__search__none {
+  display: none;
+}
+.chat__search__show {
+  display: block;
+  width: 100%;
+}
+
+.user__photos {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+.prev__photo {
+  display: flex;
+  align-items: center;
+}
+
+.message__block {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
