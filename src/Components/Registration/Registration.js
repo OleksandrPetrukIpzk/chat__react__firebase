@@ -3,6 +3,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import {Context} from "App";
 import {createUserWithEmailAndPassword} from 'firebase/auth'
 import {addDoc, collection} from "firebase/firestore";
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 import './style.css'
 export const Registration = () => {
     const [email, setEmail] = useState('');
@@ -30,7 +31,7 @@ export const Registration = () => {
                 });
                 navigate('/')
             }
-        ).catch(error => console.log(error))
+        ).catch(error => NotificationManager.error('Something with registration'))
     }
     return (<div className='login'>
         <h2>Registration</h2>
@@ -39,5 +40,6 @@ export const Registration = () => {
         <input className='login__input' type='password' placeholder='Password' onChange={(e) => handleChangePassword(e.target.value)}/>
         <button className='login__button' onClick={registerUser}>Register</button>
         <Link className='login__link' to='/'>I have account</Link>
+        <NotificationContainer/>
     </div>)
 }

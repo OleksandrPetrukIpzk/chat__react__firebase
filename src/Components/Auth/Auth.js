@@ -1,15 +1,17 @@
-import {useContext, useEffect, useState} from "react";
+import {useContext, useState} from "react";
 import {Link, useNavigate} from 'react-router-dom';
 import {Context} from "App";
 import {signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider} from 'firebase/auth'
 import {addDoc, collection, getDocs} from "firebase/firestore";
 import './style.css'
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 export const Auth = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const {auth, db} = useContext(Context);
     const navigate = useNavigate();
+
     const login = async () => {
         let isRegisteredUser = false;
         const provider = new GoogleAuthProvider();
@@ -30,12 +32,13 @@ export const Auth = () => {
         }
         navigate('/chat')
     }
+
     const loginUser = () => {
         signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
                 const user = userCredential.user;
                 navigate('/chat')
             }
-        ).catch(error => console.log(error))
+        ).catch(error => NotificationManager.error('Something with your entered data'))
     }
     const handleChangeEmail = (value) => {
         setEmail(value);
@@ -52,5 +55,6 @@ export const Auth = () => {
         <button className='login__button' onClick={loginUser}>Login</button>
         <button className='login__button' onClick={login}>Google</button>
         <Link className='login__link' to='/registration'>Registration</Link>
+        <NotificationContainer/>
     </div>)
 }

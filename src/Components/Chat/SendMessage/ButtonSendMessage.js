@@ -2,6 +2,7 @@ import {useContext} from "react";
 import {addDoc, collection} from "firebase/firestore";
 import {Context} from "App";
 import {IconSendMessage} from "Components/Chat/SendMessage/IconSendMessage";
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 export const ButtonSendMessage = ({text, messages, selectedChat, setText}) => {
 
@@ -43,12 +44,17 @@ export const ButtonSendMessage = ({text, messages, selectedChat, setText}) => {
                 setText('');
 
             } catch (error) {
-                console.log(error);
+                NotificationManager.error('Message dont send. Reset site')
             }
 
         }
     }
 
-    return (<button className='send__button' onClick={sendMessage}><IconSendMessage/>
-    </button>)
+    return (<>
+        <button className='send__button' onClick={sendMessage}>
+            <IconSendMessage/>
+    </button>
+    <NotificationContainer/>
+        </>
+    )
 }

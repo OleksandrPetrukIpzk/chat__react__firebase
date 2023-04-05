@@ -1,25 +1,28 @@
-import {initializeApp} from "firebase/app";
-import {getDatabase} from "firebase/database";
-import React, {createContext, useEffect, useState} from "react";
-import {getAuth} from "firebase/auth";
-import {collection, getFirestore, onSnapshot} from "firebase/firestore";
+import React, {createContext, useState} from "react";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {getFirestore} from "firebase/firestore";
+import {initializeApp} from "firebase/app";
+import {getAuth} from "firebase/auth";
+import { getStorage } from "firebase/storage";
 import {Auth} from "Components/Auth/Auth";
 import {Chat} from "Components/Chat/Chat";
 import {Registration} from "Components/Registration/Registration";
-import { getStorage } from "firebase/storage";
+import 'react-notifications/lib/notifications.css';
 
 export const Context = createContext(null);
+
 const App = () => {
+
   initializeApp({
-    apiKey: "AIzaSyCbqJ0XgUohGw0muZNs0p42KXaVfY8tOVA",
-    authDomain: "chat-app-react-5bd2e.firebaseapp.com",
-    projectId: "chat-app-react-5bd2e",
-    storageBucket: "chat-app-react-5bd2e.appspot.com",
-    messagingSenderId: "546866629044",
-    appId: "1:546866629044:web:4cfe084831b8d2c8044ae1",
-      databaseURL: "https://chat-app-react-5bd2e-default-rtdb.firebaseio.com/",
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID,
+    databaseURL: process.env.REACT_APP_DATABASE_URL,
   });
+
   const auth = getAuth();
   const db = getFirestore();
   const storage = getStorage()
@@ -28,6 +31,7 @@ const App = () => {
     const [userInfo, setUserInfo] = useState({});
     const [allMessagesUser, setAllMessagesUser] = useState([]);
   const [isChats, setIsChats] = useState(false);
+
   const router = createBrowserRouter([
     {
       path: '/',
@@ -42,6 +46,7 @@ const App = () => {
       element: <Registration/>
     }
   ])
+
   return (
       <Context.Provider value={{
         auth,

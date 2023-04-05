@@ -3,14 +3,14 @@ import {ref, uploadBytes} from "firebase/storage";
 import {addDoc, collection} from "firebase/firestore";
 import {Context} from "App";
 import {IconSendFile} from "Components/Chat/SendMessage/IconSendFile";
-
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 export const SendFile = ({selectedChat, text}) => {
 
     const {db, setUsersList, usersList, storage, userInfo,} = useContext(Context);
 
     const handleChangeFile = async (e) => {
         const storageRef = ref(storage, `image/${e.target.files[0].name}`);
-        uploadBytes(storageRef, e.target.files[0]).then(snaphot => console.log("Complete"))
+        uploadBytes(storageRef, e.target.files[0]).then(snaphot => NotificationManager.success("Photo is change"))
         await addDoc(collection(db, 'messages'), {
             text: storageRef.fullPath,
             uidFrom: userInfo.uid,
@@ -33,6 +33,8 @@ export const SendFile = ({selectedChat, text}) => {
             <IconSendFile/>
         </label>
             <input id='file-upload' type='file' onChange={handleChangeFile} multiple
-                   accept="image/png, image/jpg, image/gif, image/jpeg"/></div>
+                   accept="image/png, image/jpg, image/gif, image/jpeg"/>
+    <NotificationContainer/>
+    </div>
     )
 }
